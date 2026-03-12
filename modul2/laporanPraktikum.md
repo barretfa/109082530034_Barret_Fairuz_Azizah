@@ -33,5 +33,5 @@ func main() {
 ### Output Unguided :
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul1/output/soal1.png)
-[penjelasan]
+![Screenshot Output Unguided 1_1](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/ALPRO2/modul2/output/soal1.png)
+Program di atas meminta user untuk memasukkan nilai/value dari satu, dua, dan tiga dalam bentuk string. Setelah itu pada Output awal, program memberikan keluaran/output dari nilai/value yang telah user masukkan tadi. Lalu, pada baris ke-17 sampai 19 diberi aturan dimana value dari temp itu sama dengan value satu, value dari satu sama dengan value dua, dan value dari tiga sama dengan value temp, atau di sini dilakukan pergeseran atau rotation. Jadi pada Output akhir, program akan memberikan output/keluaran berdasarkan peraturan yang sudah ada di atasnya/sebelumnya. 
