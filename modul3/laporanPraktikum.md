@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 1 - Review Alpro 1 </h1>
+# <h1 align="center">Laporan Praktikum Modul 3 - Fungsi </h1>
 
 <p align="center">Barret Fairuz Azizah - 109082530034</p>
 
