@@ -75,7 +75,7 @@ func main(){
 
 ##### Output
 
-![Screenshot Output Unguided 1_2](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/ALPRO2/modul2/output/soal2.png)
+![Screenshot Output Unguided 1_2](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul2/output/soal2.png)
 Program di atas merupakan program untuk menampilkan suatu status “BERHASIL” apakah “true” atau “false”. Kondisi tersebut tergantung dari inputan yang user inputkan. Status “BERHASIL” akan “true” ketika user menginputkan warna dari ke 4 tabung reaksi secara berurutan yaitu ‘merah’, ‘kuning’, ‘hijau’, dan ‘ungu’sebanyak 5 kali percobaan. Jika salah satu saja tidak sesuai urutan maka status “BERHASIL” akan menjadi “false”.
 
 ### 3. PT POS membutuhkan aplikasi perhitungan biaya kirim berdasarkan berat parsel. Maka, buatlah program BiayaPos untuk menghitung biaya pengiriman tersebut dengan ketentuan sebagai berikut! Dari berat parsel (dalam gram), harus dihitung total berat dalam kg dan sisanya (dalam gram). Biaya jasa pengiriman adalah Rp. 10.000,- per kg. Jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Sisa berat (yang kurang dari 1kg) digratiskan biayanya apabila total berat ternyata lebih dari 10kg.
@@ -134,5 +134,5 @@ biayaKg = a1 * 10000
 
 ##### Output
 
-![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/ALPRO2/modul2/output/soal3.png)
+![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul2/output/soal3.png)
 Program di atas merupakan program untuk menghitung sekaligus menampilkan detail berat parsel berdasarkan berat parsel dalam gram yang diinputkan oleh user yang kemudian program harus menghitung dan menampilkannya dalam bentuk kilogram (kg) dan sisanya dalam bentuk gram (gr). Selanjutnya, program harus menghitung dan menampilkan detail biaya dimana setiap 1 kg paket dihargai sebesar 10k (Rp. 10.000) dan sisa berat dalam gram tadi dikenakan tambahan biaya dengan ketentuan jika sisa berat tidak kurang dari 500 gram, maka tambahan biaya kirim hanya Rp. 5,- per gram saja. Tetapi jika kurang dari 500 gram, maka tambahan biaya akan dibebankan sebesar Rp. 15,- per gram. Lalu program akan menghitung dan menampilkan total biayanya, dan ada ketentuan tambahan, jika total berat paket > 10 kg dan sisa berat (yang kurang dari 1kg) maka tambahan biaya akan digratiskan.
