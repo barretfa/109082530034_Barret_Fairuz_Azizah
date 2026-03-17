@@ -37,7 +37,7 @@ func main() {
 
 ##### Output
 
-![Screenshot Output Unguided 1_1](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/ALPRO2/modul2/output/soal1.png)
+![Screenshot Output Unguided 1_1](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul2/output/soal1.png)
 Program di atas meminta user untuk memasukkan nilai/value dari satu, dua, dan tiga dalam bentuk string. Setelah itu pada Output awal, program memberikan keluaran/output dari nilai/value yang telah user masukkan tadi. Di sini diberi aturan dimana value dari temp itu sama dengan value satu, value dari satu sama dengan value dua, dan value dari tiga sama dengan value temp, atau di sini dilakukan pergeseran atau rotation. Jadi pada Output akhir, program akan memberikan output/keluaran berdasarkan peraturan yang sudah ada di atasnya/sebelumnya.
 
 ### 2. Siswa kelas IPA di salah satu sekolah menengah atas di Indonesia sedang mengadakan praktikum kimia. Di setiap percobaan akan menggunakan 4 tabung reaksi, yang mana susunan warna cairan di setiap tabung akan menentukan hasil percobaan. Siswa diminta untuk mencatat hasil percobaan tersebut. Percobaan dikatakan berhasil apabila susunan warna zat cair pada gelas 1 hingga gelas 4 secara berturutan adalah ‘merah’, ‘kuning’, ‘hijau’, dan ‘ungu’ selama 5 kali percobaan berulang.Buatlah sebuah program yang menerima input berupa warna dari ke 4 gelas reaksi sebanyak 5 kali percobaan. Kemudian program akan menampilkan true apabila urutan warna sesuai dengan informasi yang diberikan pada paragraf sebelumnya, dan false untuk urutan warna lainnya.
