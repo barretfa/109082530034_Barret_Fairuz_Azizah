@@ -65,15 +65,7 @@ func main() {
 ![Screenshot Output Unguided 1_1](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul4/output/one_output.png)
 Program di atas meminta user untuk memasukkan empat buah bilangan asli a, b, c, dan d yang dipisahkan oleh spasi, dengan syarat a ≥ c dan b≥ d. Kemudian program mulai menghitung permutasi dan kombinasi dengan pasangan bilangan a dan c, b dan d, lalu setelah menghitungnya program akan menampilkan hasilnya menjadi dua baris dengan baris pertama adalah hasil permutasi dan kombinasi a terhadap c, sedangkan baris kedua adalah hasil permutasi dan kombinasi b terhadap d.
 
-### 2. Kompetisi pemrograman tingkat nasional berlangsung ketat. Setiap peserta diberikan 8 soal
-yang harus dapat diselesaikan dalam waktu 5 jam saja. Peserta yang berhasil menyelesaikan
-soal paling banyak dalam waktu paling singkat adalah pemenangnya.
-Buat program gema yang mencari pemenang dari daftar peserta yang diberikan. Program
-harus dibuat modular, yaitu dengan membuat prosedur hitungSkor yang mengembalikan total
-soal dan total skor yang dikerjakan oleh seorang peserta, melalui parameter formal.
-Pembacaan nama peserta dilakukan di program utama, sedangkan waktu pengerjaan dibaca
-di dalam prosedur.
-prosedure hitungSkor(in/out soal, skor : integer)
+### 2. Kompetisi pemrograman tingkat nasional berlangsung ketat. Setiap peserta diberikan 8 soal yang harus dapat diselesaikan dalam waktu 5 jam saja. Peserta yang berhasil menyelesaikan soal paling banyak dalam waktu paling singkat adalah pemenangnya. Buat program gema yang mencari pemenang dari daftar peserta yang diberikan. Program harus dibuat modular, yaitu dengan membuat prosedur hitungSkor yang mengembalikan total soal dan total skor yang dikerjakan oleh seorang peserta, melalui parameter formal. Pembacaan nama peserta dilakukan di program utama, sedangkan waktu pengerjaan dibaca di dalam prosedur. prosedure hitungSkor(in/out soal, skor : integer). Setiap baris masukan dimulai dengan satu string nama peserta tersebut diikuti dengan adalah 8 integer yang menyatakan berapa lama (dalam menit) peserta tersebut menyelesaikan soal. Jika tidak berhasil atau tidak mengirimkan jawaban maka otomatis dianggap menyelesaikan dalam waktu 5 jam 1 menit (301 menit). Satu baris keluaran berisi nama pemenang, jumlah soal yang diselesaikan, dan nilai yang diperoleh. Nilai adalah total waktu yang dibutuhkan untuk menyelesaikan soal yang berhasil diselesaikan.
 
 #### soal2.go
 
@@ -127,4 +119,4 @@ func main() {
 ##### Output
 
 ![Screenshot Output Unguided 1_2](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul4/output/two_output.png)
-Program di atas meminta user untuk memasukkan tiga buah bilangan bulat a, b, c yang dipisahkan oleh spasi kemudian program akan mulai menghitungnya menggunakan fungsi matematika berikut: f(x) = x ^ 2 , g(x) = x - 2, h(x) =x+1 lalu setelah menghitung, program akan memberikan tiga baris keluaran yang mana baris pertama adalah (fogoh) (a), baris kedua (gohof)(b), dan baris ketiga adalah (hofog)(c).
+Program di atas merupakan program untuk menentukan suatu pemenang dari perlombaan berdasarkan total waktunya, yang menjadi pemenang adalah peserta dengan jumlah total waktu yang paling sedikit dibanding dengan peserta lainnya. User diminta untuk menginputkan nama dan ada 8 jumlah waktu lalu user bisa memasukkan nama dan jumlah waktu lagi di baris bagian  bawah (catatan: peserta yang menginputkan 301 pada waktunya berarti tidak mengirimkan jawaban) dan jika sudah maka user harus menginputkan Selesai agar program tidak akan berulang dan program akan langsung menghitung atau memproses lalu program akan menampilkan Nama dari pemenang lalu jumlah soal yang dikerjakan dan juga jumlah total waktu pengerjaannya. 
