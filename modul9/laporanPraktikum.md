@@ -60,7 +60,7 @@ func main() {
 
 ##### Output
 
-![Screenshot Output Unguided 1_1](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul5/output/output_satu.png)
+![Screenshot Output Unguided 1_1](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul9/output/outputOne.png)
 Program di atas adalah program untuk menampilkan deret angka Fibonacci. Program di atas menggunakan fungsi rekursif. Dalam fungsi Fibonacci ada dua kondisi yaitu ketika n = 0 maka akan mengembalikan nilai 0 begitu pula ketika n = 1. Jika n sudah lebih dari 1 maka program akan menghitung fibo(n-1) + fibo(n-2) atau mengembalikan nilai. 
 
 ### 2. Buatlah sebuah program yang digunakan untuk menampilkan pola bintang berikut ini dengan menggunakan fungsi rekursif. N adalah masukan dari user.
