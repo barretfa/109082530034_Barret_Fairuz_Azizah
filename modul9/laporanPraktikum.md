@@ -61,36 +61,112 @@ func main() {
 ##### Output
 
 ![Screenshot Output Unguided 1_1](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul9/output/outputOne.png)
-Program di atas adalah program untuk menampilkan deret angka Fibonacci. Program di atas menggunakan fungsi rekursif. Dalam fungsi Fibonacci ada dua kondisi yaitu ketika n = 0 maka akan mengembalikan nilai 0 begitu pula ketika n = 1. Jika n sudah lebih dari 1 maka program akan menghitung fibo(n-1) + fibo(n-2) atau mengembalikan nilai. 
+Program di atas meminta user untuk memasukkan beberapa bilangan bulat yang terbagi menjadi 3 baris, baris pertama dan kedua berisi koordinat titik pusat (cx, cy) dan radius dari lingkaran 1 dan lingkaran 2, baris ketiga berisi koordinat titik sembarang. Selanjutnya, program akan menghitung jarak dengan menggunakan rumus √(a-c)² + (b-d)². Kemudian, melalui program akan mengecek apakah titik berada di dalam suatu circle (jika jarak <= r). Berdasarkan pengecekan tersebut program akan menampilkan apakah titik berada di dalam lingkaran 1 atau lingkaran 2, atau keduanya, atau di luar kedua lingkaran.
 
-### 2. Buatlah sebuah program yang digunakan untuk menampilkan pola bintang berikut ini dengan menggunakan fungsi rekursif. N adalah masukan dari user.
+### 2. Sebuah array digunakan untuk menampung sekumpulan bilangan bulat. Buatlah program yang digunakan untuk mengisi array tersebut sebanyak N elemen nilai. Asumsikan array memiliki kapasitas penyimpanan data sejumlah elemen tertentu. Program dapat menampilkan beberapa informasi berikut:
+### a. Menampilkan keseluruhan isi dari array.
+### b. Menampilkan elemen-elemen array dengan indeks ganjil saja.
+### c. enampilkan elemen-elemen array dengan indeks genap saja (asumsi indek ke-0 adalah genap).
+### d. Menampilkan elemen-elemen array dengan indeks kelipatan bilangan x. x bisa diperoleh dari masukan pengguna.
+### e. Menghapus elemen array pada indeks tertentu, asumsi indeks yang hapus selalu valid. Tampilkan keseluruhan isi dari arraynya, pastikan data yang dihapus tidak tampil
+### f. Menampilkan rata-rata dari bilangan yang ada di dalam array.
+### g. Menampilkan standar deviasi atau simpangan baku dari bilangan yang ada di dalam array tersebut.
 
 #### soal2.go
 
 ```go
 package main
 
-import "fmt"
-
-func star(n, i int) {
-	if i > n {
-		return
-	}
-	var j int
-	for j = 0; j < i; j++ {
-		fmt.Print("*")
-	}
-	fmt.Println()
-
-	star(n, i+1)
-}
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	var n int
-	fmt.Scan(&n)
-	star(n, 1)
-}
 
+	var arr [100]int
+	var n int
+
+	fmt.Print("Masukkan jumlah elemen (max 100 elemen): ")
+	fmt.Scan(&n)
+
+	for i := 0; i < n; i++ {
+		fmt.Printf("Masukkan elemen ke-%d: ", i)
+		fmt.Scan(&arr[i])
+	}
+
+	// a. Menampilkan keseluruhan isi dari array.
+	for i := 0; i < n; i++ {
+		fmt.Printf("arr[%d] = %d\n", i, arr[i])
+	}
+
+	// b. Menampilkan elemen-elemen array dengan indeks ganjil saja.
+	for i := 0; i < n; i++ {
+		if i%2 != 0 {
+			fmt.Printf("arr[%d] = %d\n", i, arr[i])
+		}
+	}
+
+	// c. Menampilkan elemen-elemen array dengan indeks genap saja (asumsi indek ke-0 adalah genap).
+	for i := 0; i < n; i++ {
+		if i%2 == 0 {
+			fmt.Printf("arr[%d] = %d\n", i, arr[i])
+		}
+	}
+
+	// d. Menampilkan elemen-elemen array dengan indeks kelipatan bilangan x. x bisa diperoleh dari masukan pengguna.
+	var x int
+	fmt.Print("\nMasukkan nilai x untuk kelipatan: ")
+	fmt.Scan(&x)
+	for i := 0; i < n; i++ {
+		if i%x == 0 {
+			fmt.Printf("arr[%d] = %d\n", i, arr[i])
+		}
+	}
+
+	// e. Menghapus elemen array pada indeks tertentu, asumsi indeks yang hapus selalu valid. Tampilkan keseluruhan isi dari arraynya, pastikan data yang dihapus tidak tampil. 
+	var idx int
+	fmt.Print("\nMasukkan indeks yang ingin dihapus: ")
+	fmt.Scan(&idx)
+	for i := idx; i < n-1; i++ {
+		arr[i] = arr[i+1]
+	}
+	n = n - 1
+	fmt.Println("Array setelah dihapus:")
+	for i := 0; i < n; i++ {
+		fmt.Printf("arr[%d] = %d\n", i, arr[i])
+	}
+
+	// f. Menampilkan rata-rata dari bilangan yang ada di dalam array.
+	total := 0
+	for i := 0; i < n; i++ {
+		total = total + arr[i]
+	}
+	rataRata := float64(total) / float64(n)
+	fmt.Print(rataRata)
+
+	// g.Menampilkan standar deviasi atau simpangan baku dari bilangan yang ada di dalam array tersebut.
+	mean := float64(total) / float64(n)
+	jumlahKuadrat := 0.0
+	for i := 0; i < n; i++ {
+		selisih := float64(arr[i]) - mean
+		jumlahKuadrat = jumlahKuadrat + (selisih * selisih)
+	}
+	standarDeviasi := math.Sqrt(jumlahKuadrat / float64(n))
+	fmt.Printf("Standar deviasi = %.2f\n", standarDeviasi)
+
+	// h.Menampilkan frekuensi dari suatu bilangan tertentu di dalam array yang telah diisi tersebut.
+	var cari int
+	fmt.Print("\nMasukkan bilangan yang ingin dicari frekuensinya: ")
+	fmt.Scan(&cari)
+	frekuensi := 0
+	for i := 0; i < n; i++ {
+		if arr[i] == cari {
+			frekuensi = frekuensi + 1
+		}
+	}
+	fmt.Printf("Bilangan %d muncul sebanyak %d kali\n", cari, frekuensi)
+}
 ```
 
 ### Output Unguided :
