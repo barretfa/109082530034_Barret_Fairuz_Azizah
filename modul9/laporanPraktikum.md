@@ -243,5 +243,5 @@ func main() {
 
 ##### Output
 
-![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modu5/output/outputThree.png)
+![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul9/output/outputThree.png)
 Program akan meminta user untuk memasukkan dua nama club sepak bola yang bertanding, inputan ini dimasukkan ke dalam variable klubA dan klubB. Lalu, program menggunakan perulangan untuk meminta user untuk kembali memasukkan bilangan sebagai skorA dan skorB, program berulang hingga salah satu dari skor tidak valid (bernilai negatif). Lalu, setiap pertandingan akan dibandingkan atau dicek siapa yang skornya lebih tinggi, jika skornya sama maka yang muncul akan "Draw". Setelah program berhenti berulang maka akan muncul tulisan "Pertandingan selesai."
