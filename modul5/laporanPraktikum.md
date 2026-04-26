@@ -109,5 +109,5 @@ func main() {
 
 ##### Output
 
-![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modu5/output/output_tiga.png)
+![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul5/output/output_tiga.png)
 Program di atas merupakan program untuk menemukan bilangan yang menjadi faktor dari suatu bilangan yang diinputkan oleh user. Pertama-tama user akan diminta untuk memasukkan bilangan bulat lalu program akan memprosesnya dan akan menampilkan hasilnya. 
