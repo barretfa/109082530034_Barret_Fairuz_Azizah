@@ -75,6 +75,9 @@ Program di atas meminta user untuk memasukkan beberapa bilangan bulat yang terba
 #### soal2.go
 
 ```go
+//Nama: Barret Fairuz Azizah
+//NIM: 109082530034
+
 package main
 
 import (
@@ -107,7 +110,7 @@ func main() {
 		}
 	}
 
-	// c. Menampilkan elemen-elemen array dengan indeks genap saja (asumsi indek ke-0 adalah genap).
+	// c. Menampilkan elemen-elemen array dengan indeks genap saja (asumsi indeks ke-0 adalah genap).
 	for i := 0; i < n; i++ {
 		if i%2 == 0 {
 			fmt.Printf("arr[%d] = %d\n", i, arr[i])
@@ -124,7 +127,7 @@ func main() {
 		}
 	}
 
-	// e. Menghapus elemen array pada indeks tertentu, asumsi indeks yang hapus selalu valid. Tampilkan keseluruhan isi dari arraynya, pastikan data yang dihapus tidak tampil. 
+	// e. Menghapus elemen array pada indeks tertentu. Menampilkan data yang tidak dihapus saja.  
 	var idx int
 	fmt.Print("\nMasukkan indeks yang ingin dihapus: ")
 	fmt.Scan(&idx)
@@ -153,9 +156,9 @@ func main() {
 		jumlahKuadrat = jumlahKuadrat + (selisih * selisih)
 	}
 	standarDeviasi := math.Sqrt(jumlahKuadrat / float64(n))
-	fmt.Printf("Standar deviasi = %.2f\n", standarDeviasi)
+	fmt.Printf("\nStandar deviasi = %.2f\n", standarDeviasi)
 
-	// h.Menampilkan frekuensi dari suatu bilangan tertentu di dalam array yang telah diisi tersebut.
+	// h.Menampilkan frekuensi dari suatu bilangan tertentu di dalam array tersebut. 
 	var cari int
 	fmt.Print("\nMasukkan bilangan yang ingin dicari frekuensinya: ")
 	fmt.Scan(&cari)
@@ -174,9 +177,16 @@ func main() {
 ##### Output
 
 ![Screenshot Output Unguided 1_2](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul9/output/outputTwo.png)
-Program di atas meminta user untuk memasukkan bilangan bulat positif. Lalu kemudian program akan langsung menjalankan sesuai dengan perintah. Dimana program akan mencetak baris pola bintang dari atas hingga bawah terurut sesuai dengan inputan yang user beri (bil bulat positif tadi). Pola bintang dimulai 1 hingga n (bil bul positif).
+a. Menggunakan perulangan untuk menampilkan keseluruhan array. Perulangan berhenti ketika nilai i (0) kurang dari n (masukkan dari user). Example: user memasukkan nilai n sebesar 4, maka perulangan akan mulai dari 0 hingga 3. 
+b. Menggunakan perulangan dan percabangan untuk menampilkan elemen array dengan indeks ganjil. Jika n-nya 4 maka yang akan muncul adalah elemen dari indeks 1 dan 3. 
+c. Menggunakan perulangan dan percabangan untuk menampilkan elemen array dengan indeks genap. Jika n-nya 4 maka yang akan muncul adalah elemen dari indeks 0 dan 2.
+d. Menggunakan perulangan dan percabangan untuk menampilkan elemen dari indeks kelipatan x yang mana x merupakan inputan dari user. Di sini user diminta memasukkan nilai x. Program lalu mencetak elemen yang indeksnya merupakan kelipatan dari x.
+e. Menggunakan perulangan untuk menampilkan elemen pada indeks tertentu saja karena di sini user diminta untuk memasukkan indeks yang ingin dihapus, jadi nanti yang akan ditampilkan hanya elemen dari indeks-indeks yang tidak dihapus. 
+f. Menggunakan perulangan untuk menampilkan rata-rata dari elemen/bilangan di dalam array tersebut setelah poin d (setelah ada elemen dari suatu indeks dihapus). Di sini program menjumlahkan semua elemen array ke variabel total, lalu dibagi dengan n. 
+g. Menggunakan perulangan untuk menampilkan standar deviasi. Standar deviasi mengukur seberapa jauh nilai-nilai dalam array menyebar dari rata-ratanya. Langkah-langkahnya adalah yang pertama hitung rata-rata (mean) lalu kurangi setiap elemen dengan mean yang telah dihitung tadi kemudian jumlahkan semua hasil kuadrat lalu bagi dengan n. 
+h. Menggunakan perulangan dan percabangan untuk mencari frekuensi dari suatu bilangan di dalam array tersebut. User diminta untuk memasukkan bilangan yang ingin dicari lalu program akan mengecek satu per satu isi dari array, setiap kali menemukan bilangan yang sama, variabel frekuensi ditambah 1.
 
-### 3. Buatlah program yang mengimplementasikan rekursif untuk menampilkan faktor bilangan dari suatu N, atau bilangan yang apa saja yang habis membagi N. Masukan terdiri dari sebuah bilangan bulat positif N. Keluaran terdiri dari barisan bilangan yang menjadi faktor dari N (terurut dari 1 hingga N ya).
+### 3.Sebuah program digunakan untuk menyimpan dan menampilkan nama-nama klub yang memenangkan pertandingan bola pada suatu grup pertandingan. Buatlah program yang digunakan untuk merekap skor pertandingan bola 2 buah klub bola yang berlaga. Pertama-tama program meminta masukan nama-nama klub yang bertanding, kemudian program meminta masukan skor hasil pertandingan kedua klub tersebut. Yang disimpan dalam array adalah nama-nama klub yang menang saja. Proses input skor berhenti ketika skor salah satu atau kedua klub tidak valid (negatif). Di akhir program, tampilkan daftar klub yang memenangkan pertandingan.
 #### soal3.go
 
 ```go

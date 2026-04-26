@@ -1,3 +1,6 @@
+//Nama: Barret Fairuz Azizah
+//NIM: 109082530034
+
 package main
 
 import (
@@ -78,7 +81,7 @@ func main() {
 	standarDeviasi := math.Sqrt(jumlahKuadrat / float64(n))
 	fmt.Printf("\nStandar deviasi = %.2f\n", standarDeviasi)
 
-	// h.Menampilkan frekuensi dari suatu bilangan tertentu di dalam array yang telah diisi tersebut.
+	// h.Menampilkan frekuensi dari suatu bilangan tertentu di dalam array tersebut. 
 	var cari int
 	fmt.Print("\nMasukkan bilangan yang ingin dicari frekuensinya: ")
 	fmt.Scan(&cari)
