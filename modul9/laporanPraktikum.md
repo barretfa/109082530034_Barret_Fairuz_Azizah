@@ -186,7 +186,7 @@ f. Menggunakan perulangan untuk menampilkan rata-rata dari elemen/bilangan di da
 g. Menggunakan perulangan untuk menampilkan standar deviasi. Standar deviasi mengukur seberapa jauh nilai-nilai dalam array menyebar dari rata-ratanya. Langkah-langkahnya adalah yang pertama hitung rata-rata (mean) lalu kurangi setiap elemen dengan mean yang telah dihitung tadi kemudian jumlahkan semua hasil kuadrat lalu bagi dengan n. 
 h. Menggunakan perulangan dan percabangan untuk mencari frekuensi dari suatu bilangan di dalam array tersebut. User diminta untuk memasukkan bilangan yang ingin dicari lalu program akan mengecek satu per satu isi dari array, setiap kali menemukan bilangan yang sama, variabel frekuensi ditambah 1.
 
-### 3.Sebuah program digunakan untuk menyimpan dan menampilkan nama-nama klub yang memenangkan pertandingan bola pada suatu grup pertandingan. Buatlah program yang digunakan untuk merekap skor pertandingan bola 2 buah klub bola yang berlaga. Pertama-tama program meminta masukan nama-nama klub yang bertanding, kemudian program meminta masukan skor hasil pertandingan kedua klub tersebut. Yang disimpan dalam array adalah nama-nama klub yang menang saja. Proses input skor berhenti ketika skor salah satu atau kedua klub tidak valid (negatif). Di akhir program, tampilkan daftar klub yang memenangkan pertandingan.
+### 3. Sebuah program digunakan untuk menyimpan dan menampilkan nama-nama klub yang memenangkan pertandingan bola pada suatu grup pertandingan. Buatlah program yang digunakan untuk merekap skor pertandingan bola 2 buah klub bola yang berlaga. Pertama-tama program meminta masukan nama-nama klub yang bertanding, kemudian program meminta masukan skor hasil pertandingan kedua klub tersebut. Yang disimpan dalam array adalah nama-nama klub yang menang saja. Proses input skor berhenti ketika skor salah satu atau kedua klub tidak valid (negatif). Di akhir program, tampilkan daftar klub yang memenangkan pertandingan.
 #### soal3.go
 
 ```go
@@ -245,3 +245,82 @@ func main() {
 
 ![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul9/output/outputThree.png)
 Program akan meminta user untuk memasukkan dua nama club sepak bola yang bertanding, inputan ini dimasukkan ke dalam variable klubA dan klubB. Lalu, program menggunakan perulangan untuk meminta user untuk kembali memasukkan bilangan sebagai skorA dan skorB, program berulang hingga salah satu dari skor tidak valid (bernilai negatif). Lalu, setiap pertandingan akan dibandingkan atau dicek siapa yang skornya lebih tinggi, jika skornya sama maka yang muncul akan "Draw". Setelah program berhenti berulang maka akan muncul tulisan "Pertandingan selesai."
+
+### 4. Sebuah array digunakan untuk menampung sekumpulan karakter, Anda diminta untuk membuat sebuah subprogram untuk melakukan membalikkan urutan isi array dan memeriksa apakah membentuk palindrom. Modifikasi program tersebut dengan menambahkan fungsi palindrom. Tambahkan instruksi untuk memanggil fungsi tersebut dan menampilkan hasilnya pada program utama.
+#### soal4.go
+
+```go
+//Nama: Barret Fairuz Azizah
+//NIM: 109082530034
+
+package main
+
+import "fmt"
+
+const NMAX int = 127
+
+type tabel [NMAX]rune
+
+func isiArray(t *tabel, n *int) {
+	*n = 0
+	var karakter rune
+	fmt.Scanf("%c", &karakter)
+	for karakter != '.' {
+		if karakter != '\n' && karakter != ' ' {
+			t[*n] = karakter
+			*n = *n + 1
+		}
+		fmt.Scanf("%c", &karakter)
+	}
+}
+
+func cetakArray(t tabel, n int) {
+	for i := 0; i < n; i++ {
+		if i > 0 {
+			fmt.Print(" ")
+		}
+		fmt.Printf("%c", t[i])
+	}
+	fmt.Println()
+}
+
+func balikanArray(t *tabel, n int) {
+	for i := 0; i < n/2; i++ {
+		t[i], t[n-1-i] = t[n-1-i], t[i]
+	}
+}
+
+func palindrom(t tabel, n int) bool {
+	for i := 0; i < n/2; i++ {
+		if t[i] != t[n-1-i] {
+			return false
+		}
+	}
+	return true
+}
+
+func main() {
+	var tab tabel
+	var m int
+
+	fmt.Print("Teks		: ")
+	isiArray(&tab, &m)
+
+
+	balikanArray(&tab, m)
+
+	fmt.Print("Reverse teks	: ")
+	cetakArray(tab, m)
+
+	fmt.Print("Palindrom	: ")
+	fmt.Println(palindrom(tab, m))
+}
+
+```
+
+### Output Unguided :
+
+##### Output
+
+![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul9/output/outputFour.png)
+Di awal program ini menggunakan perulangan yang mana user diminta untuk memasukkan karakter satu persatu menggunakan spasi lalu perulangan akan berhenti ketika user menginputkan titik di akhir kata, kemudian program akan mencetak semua karakter yang tersimpan dalam array dari indeks 0 sampai yang user inputkan. Lalu, program akan menampilkan reverse dari kata/teks yang user inputkan. Program juga dimodifikasi agar muncul output bernilai true atau false ketika teks yang diinputkan oleh user ketika direverse tetap sama. Example: APA, KATAK, dll. 
