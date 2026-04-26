@@ -30,7 +30,7 @@ func main() {
 		}
 	}
 
-	// c. Menampilkan elemen-elemen array dengan indeks genap saja (asumsi indek ke-0 adalah genap).
+	// c. Menampilkan elemen-elemen array dengan indeks genap saja (asumsi indeks ke-0 adalah genap).
 	for i := 0; i < n; i++ {
 		if i%2 == 0 {
 			fmt.Printf("arr[%d] = %d\n", i, arr[i])
@@ -47,7 +47,7 @@ func main() {
 		}
 	}
 
-	// e. Menghapus elemen array pada indeks tertentu, asumsi indeks yang hapus selalu valid. Tampilkan keseluruhan isi dari arraynya, pastikan data yang dihapus tidak tampil. 
+	// e. Menghapus elemen array pada indeks tertentu. Menampilkan data yang tidak dihapus saja.  
 	var idx int
 	fmt.Print("\nMasukkan indeks yang ingin dihapus: ")
 	fmt.Scan(&idx)
@@ -76,7 +76,7 @@ func main() {
 		jumlahKuadrat = jumlahKuadrat + (selisih * selisih)
 	}
 	standarDeviasi := math.Sqrt(jumlahKuadrat / float64(n))
-	fmt.Printf("Standar deviasi = %.2f\n", standarDeviasi)
+	fmt.Printf("\nStandar deviasi = %.2f\n", standarDeviasi)
 
 	// h.Menampilkan frekuensi dari suatu bilangan tertentu di dalam array yang telah diisi tersebut.
 	var cari int
