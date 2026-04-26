@@ -190,26 +190,51 @@ h. Menggunakan perulangan dan percabangan untuk mencari frekuensi dari suatu bil
 #### soal3.go
 
 ```go
+//Nama: Barret Fairuz Azizah
+//NIM: 109082530034
+
 package main
 
 import "fmt"
 
-func faktor(n int, i int) {
-	if i > n {
-		return
-	}
-
-	if n % i == 0 {
-		fmt.Print(i, " ")
-	}
-
-	faktor(n, i+1)
-}
-
 func main() {
-	var n int
-	fmt.Scan(&n)
-	faktor(n, 1)
+
+	var hasil [100]string
+	var jumlahHasil int = 0
+	var klubA, klubB string
+
+	fmt.Print("Klub A : ")
+	fmt.Scan(&klubA)
+	fmt.Print("Klub B : ")
+	fmt.Scan(&klubB)
+
+	pertandingan := 1
+
+	for {
+		var skorA, skorB int
+		fmt.Printf("Pertandingan %d : ", pertandingan)
+		fmt.Scan(&skorA, &skorB)
+		if skorA < 0 || skorB < 0 {
+			break
+		}
+
+		if skorA > skorB {
+			hasil[jumlahHasil] = klubA
+		} else if skorB > skorA {
+			hasil[jumlahHasil] = klubB
+		} else {
+			hasil[jumlahHasil] = "Draw"
+		}
+
+		jumlahHasil = jumlahHasil + 1
+		pertandingan = pertandingan + 1
+	}
+
+	for i := 0; i < jumlahHasil; i++ {
+		fmt.Printf("Hasil %d : %s\n", i+1, hasil[i])
+	}
+
+	fmt.Println("Pertandingan selesai")
 }
 
 ```
@@ -218,5 +243,5 @@ func main() {
 
 ##### Output
 
-![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modu5/output/output_tiga.png)
-Program di atas merupakan program untuk menemukan bilangan yang menjadi faktor dari suatu bilangan yang diinputkan oleh user. Pertama-tama user akan diminta untuk memasukkan bilangan bulat lalu program akan memprosesnya dan akan menampilkan hasilnya. 
+![Screenshot Output Unguided 1_3](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modu5/output/outputThree.png)
+Program akan meminta user untuk memasukkan dua nama club sepak bola yang bertanding, inputan ini dimasukkan ke dalam variable klubA dan klubB. Lalu, program menggunakan perulangan untuk meminta user untuk kembali memasukkan bilangan sebagai skorA dan skorB, program berulang hingga salah satu dari skor tidak valid (bernilai negatif). Lalu, setiap pertandingan akan dibandingkan atau dicek siapa yang skornya lebih tinggi, jika skornya sama maka yang muncul akan "Draw". Setelah program berhenti berulang maka akan muncul tulisan "Pertandingan selesai."
