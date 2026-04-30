@@ -97,7 +97,7 @@ func main() {
 
 ##### Output
 
-![Screenshot Output Unguided 1_2](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul4/output/outputIkan.png)
+![Screenshot Output Unguided 1_2](https://github.com/barretfa/109082530034_Barret_Fairuz_Azizah/blob/main/modul10/output/outputIkan.png)
 Program di atas merupakan program untuk menentukan total berat ikan di setiap wadah serta rata-rata berat per-wadah berdasarkan data yang user inputkan. Pertama-tama program akan meminta user untuk menginputkan dua bilangan bulat positif, yaitu x (jumlah ikan yang akan dijual) dan y (kapasitas ikan per-wadah). Selanjutnya program akan meminta user menginputkan sebanyak x bilangan riil yang menyatakan berat masing-masing ikan. Setelah semua data terkumpul, program akan memasukkan ikan ke dalam wadah secara berurutan, ikan ke-1 sampai ke-y masuk wadah pertama, ikan ke-(y+1) sampai ke-2y masuk wadah kedua, dan seterusnya. Program juga menjumlahkan berat total ikan di setiap wadah. Jumlah wadah yang dibutuhkan dihitung otomatis berdasarkan nilai x dan y. Setelah proses selesai, program akan menampilkan dua baris output, yaitu baris pertama berisi total berat ikan di setiap wadah dan baris kedua berisi rata-rata total berat per-wadah.
 
 ### 3. Pos Pelayanan Terpadu (posyandu) sebagai tempat pelayanan kesehatan perlu mencatat data berat balita (dalam kg). Petugas akan memasukkan data tersebut ke dalam array. Dari data yang diperoleh akan dicari berat balita terkecil, terbesar, dan reratanya.
