@@ -1,3 +1,6 @@
+//Nama: Barret Fairuz Azizah
+//NIM: 109082530034
+
 package main
 
 import "fmt"
@@ -28,7 +31,7 @@ func main() {
 	var n, m int
 	fmt.Scan(&n)
 
-	semuaRumah := make([]arrRumah, n)
+	rumahkerabat := make([]arrRumah, n)
 	semuaM := make([]int, n)
 
 	daerah := 0
@@ -37,7 +40,7 @@ func main() {
 		semuaM[daerah] = m
 		k := 0
 		for k < m {
-			fmt.Scan(&semuaRumah[daerah][k])
+			fmt.Scan(&rumahkerabat[daerah][k])
 			k = k + 1
 		}
 		daerah = daerah + 1
@@ -45,13 +48,13 @@ func main() {
 
 	daerah = 0
 	for daerah < n {
-		selectionSort(&semuaRumah[daerah], semuaM[daerah])
+		selectionSort(&rumahkerabat[daerah], semuaM[daerah])
 		k := 0
 		for k < semuaM[daerah] {
 			if k > 0 {
 				fmt.Print(" ")
 			}
-			fmt.Print(semuaRumah[daerah][k])
+			fmt.Print(rumahkerabat[daerah][k])
 			k = k + 1
 		}
 		fmt.Println()
